@@ -1,0 +1,5 @@
+version: v2.11.1
+plugins:
+  - module: 'logs-linter'
+    import: 'logs-linter/pkg/plugin'
+    version: latest

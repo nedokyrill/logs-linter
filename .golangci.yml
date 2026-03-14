@@ -1,0 +1,15 @@
+linters:
+  enable:
+    - logslinter
+
+linters-settings:
+  custom:
+    logslinter:
+      type: "module"
+      description: "Linter for log messages (format, language, sensitive data)."
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - logslinter
