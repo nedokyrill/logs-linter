@@ -60,10 +60,16 @@ go build -o logs-linter ./cmd/logs-linter
 ./logs-linter ./...
 ```
 
-Или установите через go install:
+Или установите через go install (если модуль опубликован):
 
 ```bash
-go install ./cmd/logs-linter@latest
+go install github.com/nedokyrill/logs-linter/cmd/logs-linter@latest
+```
+
+Или из локальной директории:
+
+```bash
+go install ./cmd/logs-linter
 ```
 
 ## Примеры проверок
@@ -142,6 +148,8 @@ make build
 ```bash
 make test
 ```
+
+**Примечание:** Тесты могут требовать настройки golden файлов для `analysistest`. Это известная особенность работы с тестовыми данными анализаторов.
 
 ## Технические детали
 
